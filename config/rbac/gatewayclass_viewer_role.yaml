@@ -1,0 +1,23 @@
+# permissions for end users to view gatewayclasses.
+apiVersion: rbac.authorization.k8s.io/v1
+kind: ClusterRole
+metadata:
+  labels:
+    app.kubernetes.io/name: dummy-k8s-operator
+    app.kubernetes.io/managed-by: kustomize
+  name: gatewayclass-viewer-role
+rules:
+- apiGroups:
+  - net.dummy.com
+  resources:
+  - gatewayclasses
+  verbs:
+  - get
+  - list
+  - watch
+- apiGroups:
+  - net.dummy.com
+  resources:
+  - gatewayclasses/status
+  verbs:
+  - get

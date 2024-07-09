@@ -1,0 +1,9 @@
+apiVersion: net.dummy.com/v1alpha1
+kind: GatewayClass
+metadata:
+  labels:
+    app.kubernetes.io/name: dummy-k8s-operator
+    app.kubernetes.io/managed-by: kustomize
+  name: gatewayclass-sample
+spec:
+  # TODO(user): Add fields here
